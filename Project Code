@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="University Notice Board - Stay updated with the latest announcements, events, and important notices from our university.">
+    <title>University Notice Board | Stay Updated</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>UniNotice</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#notices" class="nav-link">Notices</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title">University Notice Board</h1>
+            <p class="hero-subtitle">Stay informed with the latest announcements, events, and important updates</p>
+            <a href="#notices" class="cta-button">
+                View Notices
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Notice Section -->
+    <section class="notices-section" id="notices">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Notices</h2>
+                <p class="section-subtitle">Browse through our recent announcements and updates</p>
+            </div>
+
+            <!-- Search and Filter Controls -->
+            <div class="controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search notices...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="academic">Academic</button>
+                    <button class="filter-btn" data-category="event">Events</button>
+                    <button class="filter-btn" data-category="exam">Exams</button>
+                    <button class="filter-btn" data-category="general">General</button>
+                </div>
+            </div>
+
+            <!-- Notice Cards Container -->
+            <div class="notices-grid" id="noticesGrid">
+                <!-- Notice Card 1 -->
+                <div class="notice-card" data-category="academic">
+                    <div class="notice-header">
+                        <span class="notice-badge academic">Academic</span>
+                        <span class="notice-date">
+                            <i class="far fa-calendar"></i>
+                            Dec 1, 2025
+                        </span>
+                    </div>
+                    <h3 class="notice-title">Final Semester Registration Deadline</h3>
+                    <p class="notice-description">
+                        All students are required to complete their final semester registration by December 15th, 2025. 
+                        Late registrations will incur additional fees.
+                    </p>
+                    <div class="notice-footer">
+                        <span class="notice-author">
+                            <i class="fas fa-user"></i>
+                            Academic Office
+                        </span>
+                        <button class="read-more-btn">
+                            Read More
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Notice Card 2 -->
+                <div class="notice-card" data-category="event">
+                    <div class="notice-header">
+                        <span class="notice-badge event">Event</span>
+                        <span class="notice-date">
+                            <i class="far fa-calendar"></i>
+                            Nov 28, 2025
+                        </span>
+                    </div>
+                    <h3 class="notice-title">Annual Tech Fest 2025</h3>
+                    <p class="notice-description">
+                        Join us for the biggest tech event of the year! Featuring workshops, competitions, and guest speakers 
+                        from leading tech companies. Registration opens December 5th.
+                    </p>
+                    <div class="notice-footer">
+                        <span class="notice-author">
+                            <i class="fas fa-user"></i>
+                            Student Affairs
+                        </span>
+                        <button class="read-more-btn">
+                            Read More
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Notice Card 3 -->
+                <div class="notice-card" data-category="exam">
+                    <div class="notice-header">
+                        <span class="notice-badge exam">Exam</span>
+                        <span class="notice-date">
+                            <i class="far fa-calendar"></i>
+                            Nov 25, 2025
+                        </span>
+                    </div>
+                    <h3 class="notice-title">Mid-Term Examination Schedule</h3>
+                    <p class="notice-description">
+                        The mid-term examination schedule has been published. Students can download the complete timetable 
+                        from the student portal. Exams begin on December 20th.
+                    </p>
+                    <div class="notice-footer">
+                        <span class="notice-author">
+                            <i class="fas fa-user"></i>
+                            Examination Board
+                        </span>
+                        <button class="read-more-btn">
+                            Read More
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Notice Card 4 -->
+                <div class="notice-card" data-category="general">
+                    <div class="notice-header">
+                        <span class="notice-badge general">General</span>
+                        <span class="notice-date">
+                            <i class="far fa-calendar"></i>
+                            Nov 20, 2025
+                        </span>
+                    </div>
+                    <h3 class="notice-title">Library Hours Extended</h3>
+                    <p class="notice-description">
+                        Due to upcoming exams, the university library will extend its operating hours. 
+                        The library will now be open from 7 AM to 11 PM on weekdays.
+                    </p>
+                    <div class="notice-footer">
+                        <span class="notice-author">
+                            <i class="fas fa-user"></i>
+                            Library Services
+                        </span>
+                        <button class="read-more-btn">
+                            Read More
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Notice Card 5 -->
+                <div class="notice-card" data-category="academic">
+                    <div class="notice-header">
+                        <span class="notice-badge academic">Academic</span>
+                        <span class="notice-date">
+                            <i class="far fa-calendar"></i>
+                            Nov 18, 2025
+                        </span>
+                    </div>
+                    <h3 class="notice-title">Guest Lecture on AI & Machine Learning</h3>
+                    <p class="notice-description">
+                        Dr. Sarah Johnson from MIT will deliver a guest lecture on "The Future of AI and Machine Learning" 
+                        on December 10th at 3 PM in the main auditorium.
+                    </p>
+                    <div class="notice-footer">
+                        <span class="notice-author">
+                            <i class="fas fa-user"></i>
+                            CS Department
+                        </span>
+                        <button class="read-more-btn">
+                            Read More
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Notice Card 6 -->
+                <div class="notice-card" data-category="event">
+                    <div class="notice-header">
+                        <span class="notice-badge event">Event</span>
+                        <span class="notice-date">
+                            <i class="far fa-calendar"></i>
+                            Nov 15, 2025
+                        </span>
+                    </div>
+                    <h3 class="notice-title">Sports Week 2025</h3>
+                    <p class="notice-description">
+                        Annual Sports Week is scheduled from December 12-18. Registrations for various sports events 
+                        are now open. Don't miss this opportunity to showcase your talent!
+                    </p>
+                    <div class="notice-footer">
+                        <span class="notice-author">
+                            <i class="fas fa-user"></i>
+                            Sports Committee
+                        </span>
+                        <button class="read-more-btn">
+                            Read More
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults">
+                <i class="fas fa-search"></i>
+                <p>No notices found matching your search.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Our Notice Board</h2>
+                    <p class="about-description">
+                        Welcome to the University Notice Board, your central hub for all official announcements, 
+                        events, and important updates. We strive to keep our community informed and connected.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Real-Time Updates</h4>
+                                <p>Get instant notifications for new notices and announcements</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Smart Filtering</h4>
+                                <p>Easily find relevant notices with our advanced search and filter system</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Mobile Friendly</h4>
+                                <p>Access notices anytime, anywhere on any device</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        UniNotice
+                    </h3>
+                    <p class="footer-description">
+                        Your trusted source for university announcements and updates. 
+                        Stay connected, stay informed.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#notices">Notices</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#notices">Academic</a></li>
+                        <li><a href="#notices">Events</a></li>
+                        <li><a href="#notices">Examinations</a></li>
+                        <li><a href="#notices">General</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            123 University Ave, Campus City
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            +1 (555) 123-4567
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            info@uninotice.edu
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 UniNotice. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
